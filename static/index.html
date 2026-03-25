@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreatGPT — AI Cybersecurity Analyst</title>
+  <meta name="description" content="ThreatGPT: AI-powered cybersecurity analyst for detecting phishing, malware, prompt injection, and privacy leaks in real time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo" style="text-decoration:none; cursor:pointer;">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L4 7v9c0 7 5.4 13.5 12 15 6.6-1.5 12-8 12-15V7L16 2z" fill="url(#shieldGrad)" stroke="url(#shieldStroke)" stroke-width="1"/>
+            <path d="M11 16l3.5 3.5L21 12" stroke="#00ffcc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="shieldGrad" x1="4" y1="2" x2="28" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0d2137" />
+                <stop offset="1" stop-color="#0a1628" />
+              </linearGradient>
+              <linearGradient id="shieldStroke" x1="4" y1="2" x2="28" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00ffcc" />
+                <stop offset="1" stop-color="#00aaff" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">ThreatGPT</span>
+          <span class="logo-sub">AI Cybersecurity Analyst</span>
+        </div>
+      </a>
+      <div class="header-badges">
+        <span class="badge-pill">Powered by Groq</span>
+        <span class="badge-pill badge-model">llama-3.1-8b</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Input Panel -->
+    <section class="panel input-panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span class="panel-icon">🔍</span>
+          <h2>Threat Analysis Input</h2>
+        </div>
+        <span class="panel-hint">Paste any text to analyze — email, code, prompt, or message</span>
+      </div>
+
+      <!-- Quick Examples -->
+      <div class="examples">
+        <span class="examples-label">Quick Examples:</span>
+        <button class="example-btn" id="ex-phishing" onclick="loadExample('phishing')">🎣 Phishing Email</button>
+        <button class="example-btn" id="ex-malware" onclick="loadExample('malware')">🦠 Malicious Code</button>
+        <button class="example-btn" id="ex-injection" onclick="loadExample('injection')">💉 Prompt Injection</button>
+        <button class="example-btn" id="ex-privacy" onclick="loadExample('privacy')">🔑 Privacy Leak</button>
+        <button class="example-btn" id="ex-safe" onclick="loadExample('safe')">✅ Safe Message</button>
+      </div>
+
+      <div class="input-area">
+        <textarea
+          id="threatInput"
+          placeholder="Paste suspicious email content, code snippets, prompts, or any text you want to analyze for cyber threats..."
+          rows="10"
+          spellcheck="false"
+        ></textarea>
+        <div class="input-footer">
+          <span class="char-count" id="charCount">0 characters</span>
+          <div class="input-actions">
+            <button class="btn-clear" id="clearBtn" onclick="clearInput()">Clear</button>
+            <button class="btn-analyze" id="analyzeBtn" onclick="analyzeText()">
+              <span class="btn-icon">⚡</span>
+              <span class="btn-label">Analyze Threat</span>
+              <div class="btn-loader" id="btnLoader"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Panel -->
+    <section class="panel results-panel" id="resultsPanel" style="display:none;">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span class="panel-icon">📊</span>
+          <h2>Analysis Results</h2>
+        </div>
+        <button class="btn-copy" id="copyBtn" onclick="copyResults()" title="Copy JSON">
+          <span id="copyIcon">📋</span> Copy JSON
+        </button>
+      </div>
+
+      <!-- Top summary row -->
+      <div class="result-summary">
+        <div class="result-card threat-card">
+          <div class="card-label">Threat Type</div>
+          <div class="threat-badge" id="threatBadge">—</div>
+        </div>
+        <div class="result-card risk-card">
+          <div class="card-label">Risk Level</div>
+          <div class="risk-badge" id="riskBadge">—</div>
+        </div>
+        <div class="result-card score-card">
+          <div class="card-label">Risk Score</div>
+          <div class="score-container">
+            <canvas id="scoreGauge" width="120" height="120"></canvas>
+            <div class="score-number" id="scoreNumber">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analysis text -->
+      <div class="result-section">
+        <div class="section-title">
+          <span>🧠</span> Analysis
+        </div>
+        <div class="section-body analysis-text" id="analysisText">—</div>
+      </div>
+
+      <!-- Detected Patterns -->
+      <div class="result-section" id="patternsSection">
+        <div class="section-title">
+          <span>🚩</span> Detected Patterns
+        </div>
+        <div class="patterns-wrap" id="patternsWrap"></div>
+      </div>
+
+      <!-- Recommendations -->
+      <div class="result-section" id="recsSection">
+        <div class="section-title">
+          <span>🛡️</span> Recommendations
+        </div>
+        <ul class="recs-list" id="recsList"></ul>
+      </div>
+
+      <!-- Raw JSON toggle -->
+      <div class="result-section">
+        <button class="toggle-json-btn" onclick="toggleRawJson()">
+          <span id="jsonToggleIcon">▶</span> View Raw JSON
+        </button>
+        <div class="raw-json-wrap" id="rawJsonWrap" style="display:none;">
+          <pre class="raw-json" id="rawJson"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Error Toast -->
+    <div class="toast" id="toast"></div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>ThreatGPT &copy; 2026 — AI-powered threat intelligence</span>
+    <span class="footer-sep">|</span>
+    <span>Not a replacement for professional security auditing</span>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

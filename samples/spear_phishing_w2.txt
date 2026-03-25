@@ -1,0 +1,24 @@
+From: hr-noreply@your-company-hr.net
+Subject: Action Required: W-2 Tax Form Update — Verify Your Details
+
+Dear Employee,
+
+As part of our annual tax filing process, we need you to verify and update your W-2 information 
+in our HR portal before the deadline of March 20th.
+
+Failure to update your information may result in delayed tax refunds or incorrect withholdings.
+
+Please log in here to complete the process:
+https://employee-portal.hr-taxupdate.net/w2-verify?emp=8829
+
+You will need to provide:
+- Social Security Number
+- Bank account (for direct deposit verification)
+- Date of birth
+- Current home address
+
+This is a mandatory step required by the IRS for all employees.
+
+If you did not receive this email at your registered address, please contact hr-support@company-hr.net.
+
+HR Compliance Team

@@ -1,0 +1,25 @@
+From: security@paypa1-support.com
+Subject: URGENT: Your account has been compromised!
+
+Dear Valued Customer,
+
+We have detected unusual login activity on your PayPal account from an unrecognized device in Romania.
+Your account has been temporarily limited to protect you.
+
+To restore full access, you MUST verify your account within 24 HOURS or it will be permanently suspended.
+
+Click here to verify now:
+http://paypal-secure-login.xyz/verify?token=8f3kd92jsl
+
+You will be asked to confirm:
+- Full name
+- Email address and password
+- Credit card number and CVV
+- Social Security Number (for identity verification)
+
+Failure to verify in time will result in permanent account closure and any pending funds may be held for up to 180 days.
+
+Thank you for your cooperation.
+
+PayPal Security Team
+paypal-secure.support@helpdesk-paypal.com

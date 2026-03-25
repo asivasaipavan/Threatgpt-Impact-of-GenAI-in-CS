@@ -1,0 +1,15 @@
+Hi Sarah,
+
+Hope your week is going well! I wanted to follow up on our discussion from last Thursday's team standup 
+regarding the Q2 product roadmap.
+
+The design team has finalized the mockups for the new dashboard. I've shared them in the project Confluence 
+page under "Q2 Designs". Could you take a look before Friday's review meeting and leave your comments?
+
+Also, don't forget we have the all-hands at 3 PM on Thursday — the agenda will be posted in Slack by EOD today.
+
+Let me know if you need anything from my end!
+
+Best,
+Alex
+Senior Product Manager

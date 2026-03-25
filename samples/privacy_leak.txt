@@ -1,0 +1,26 @@
+Hey team, sharing the updated production credentials below for the new deployment. 
+Please update your local configs accordingly.
+
+--- DATABASE ---
+PostgreSQL DSN: postgresql://admin:Sup3rS3cr3tP@ss2025!@prod-db.company.com:5432/users_prod
+
+--- CLOUD (AWS) ---
+AWS Access Key ID:     AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+AWS Region: us-east-1
+S3 Bucket: s3://company-prod-backups
+
+--- PAYMENT ---
+Stripe Live Secret Key: sk_live_4eC39HqLyjWDarjtT1zdp7dc
+Stripe Webhook Secret:  whsec_abcdef1234567890abcdef1234567890
+
+--- PERSONAL (for MFA reset) ---
+Employee SSN:          421-63-8865
+Credit Card (company): 4532 1548 0343 6467 | CVV: 295 | Exp: 08/27
+Personal phone:        +1-555-867-5309
+
+--- INTERNAL TOOLS ---
+Jenkins password:       jenkins_admin / P@ssword123!
+GitHub PAT:            ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Please delete this email after updating your configs!

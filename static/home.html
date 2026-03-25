@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreatGPT — AI Cybersecurity Analyst</title>
+  <meta name="description" content="ThreatGPT uses AI to detect phishing, malware, prompt injection, and privacy leaks in real time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/home.css" />
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L4 7v9c0 7 5.4 13.5 12 15 6.6-1.5 12-8 12-15V7L16 2z" fill="url(#sg)" stroke="url(#ss)" stroke-width="1"/>
+            <path d="M11 16l3.5 3.5L21 12" stroke="#00ffcc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="sg" x1="4" y1="2" x2="28" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#0d2137"/><stop offset="1" stop-color="#0a1628"/></linearGradient>
+              <linearGradient id="ss" x1="4" y1="2" x2="28" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00ffcc"/><stop offset="1" stop-color="#00aaff"/></linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-name">ThreatGPT</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#threats" class="nav-link">Threats</a>
+        <a href="/app" class="nav-cta">Launch Analyzer →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        AI-Powered Threat Intelligence
+      </div>
+      <h1 class="hero-title">
+        Detect Cyber Threats<br/>
+        <span class="gradient-text">Before They Strike</span>
+      </h1>
+      <p class="hero-sub">
+        ThreatGPT analyzes any text — emails, code, prompts, or messages — and instantly identifies phishing, malware, prompt injection, and privacy leaks using large language model intelligence.
+      </p>
+      <div class="hero-actions">
+        <a href="/app" class="btn-primary">
+          <span>⚡</span> Start Analyzing
+        </a>
+        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+      </div>
+
+      <!-- Floating stat cards -->
+      <div class="stat-bar">
+        <div class="stat-card">
+          <span class="stat-icon">🎣</span>
+          <span class="stat-label">Phishing Detection</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-icon">🦠</span>
+          <span class="stat-label">Malware Analysis</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-icon">💉</span>
+          <span class="stat-label">Prompt Injection</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-icon">🔑</span>
+          <span class="stat-label">Privacy Leak Scan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal preview mockup -->
+    <div class="terminal-wrap">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">ThreatGPT Analysis</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">analyzing input...</span></div>
+          <div class="t-line t-delay-1"><span class="t-key">"threat_type"</span><span class="t-colon">:</span> <span class="t-val-red">"phishing"</span><span class="t-comma">,</span></div>
+          <div class="t-line t-delay-2"><span class="t-key">"risk_level"</span><span class="t-colon">:</span> <span class="t-val-orange">"high"</span><span class="t-comma">,</span></div>
+          <div class="t-line t-delay-3"><span class="t-key">"risk_score"</span><span class="t-colon">:</span> <span class="t-val-num">87</span><span class="t-comma">,</span></div>
+          <div class="t-line t-delay-4"><span class="t-key">"detected_patterns"</span><span class="t-colon">:</span> <span class="t-bracket">[</span></div>
+          <div class="t-line t-delay-5 t-indent"><span class="t-val-str">"Suspicious sender domain"</span><span class="t-comma">,</span></div>
+          <div class="t-line t-delay-6 t-indent"><span class="t-val-str">"Urgency tactic detected"</span><span class="t-comma">,</span></div>
+          <div class="t-line t-delay-7 t-indent"><span class="t-val-str">"Credential harvesting link"</span></div>
+          <div class="t-line t-delay-8"><span class="t-bracket">]</span><span class="t-comma">,</span></div>
+          <div class="t-line t-delay-9"><span class="t-key">"recommendations"</span><span class="t-colon">:</span> <span class="t-bracket">[...]</span></div>
+          <div class="t-cursor t-delay-10">▋</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="section-inner">
+      <div class="section-label">Core Capabilities</div>
+      <h2 class="section-title">Powered by <span class="gradient-text">LLM Intelligence</span></h2>
+      <p class="section-sub">Built on Groq's ultra-fast inference with LangChain orchestration</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(255,140,0,0.1); border-color: rgba(255,140,0,0.25);">🎣</div>
+          <h3>Phishing Detection</h3>
+          <p>Identifies urgency manipulation, spoofed sender domains, credential-harvesting links, and fake login pages.</p>
+          <div class="feature-tags">
+            <span>Email Analysis</span><span>URL Inspection</span><span>Social Engineering</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(255,68,68,0.1); border-color: rgba(255,68,68,0.25);">🦠</div>
+          <h3>Malware Analysis</h3>
+          <p>Detects obfuscated scripts, base64 payloads, <code>eval()</code>/<code>exec()</code> abuse, reverse shells, and persistence mechanisms.</p>
+          <div class="feature-tags">
+            <span>Python/PS Scripts</span><span>Base64 Decode</span><span>Shell Commands</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(204,68,255,0.1); border-color: rgba(204,68,255,0.25);">💉</div>
+          <h3>Prompt Injection</h3>
+          <p>Flags jailbreak attempts, DAN personas, system override commands, and instruction-hijacking patterns.</p>
+          <div class="feature-tags">
+            <span>Jailbreak Detection</span><span>DAN Patterns</span><span>Override Attempts</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(255,204,0,0.1); border-color: rgba(255,204,0,0.25);">🔑</div>
+          <h3>Privacy Leak Scanner</h3>
+          <p>Spots exposed AWS keys, Stripe secrets, GitHub tokens, SSNs, credit card numbers, and database credentials.</p>
+          <div class="feature-tags">
+            <span>API Keys</span><span>PII Detection</span><span>Credentials</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(0,170,255,0.1); border-color: rgba(0,170,255,0.25);">📊</div>
+          <h3>Risk Scoring</h3>
+          <p>Every analysis returns a 0–100 risk score with Low / Medium / High / Critical severity classification.</p>
+          <div class="feature-tags">
+            <span>0–100 Score</span><span>4 Risk Levels</span><span>Visual Gauge</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(0,255,204,0.1); border-color: rgba(0,255,204,0.25);">🛡️</div>
+          <h3>Mitigation Advice</h3>
+          <p>Each threat comes with actionable recommendations to neutralize risk and harden your security posture.</p>
+          <div class="feature-tags">
+            <span>Action Steps</span><span>Best Practices</span><span>Instant Guidance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ───────────────────────── -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="section-inner">
+      <div class="section-label">Architecture</div>
+      <h2 class="section-title">How <span class="gradient-text">ThreatGPT</span> Works</h2>
+
+      <div class="steps-list">
+        <div class="step-row">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Input Submission</h3>
+            <p>User pastes suspicious text — email, code snippet, prompt, or any message — into the analyzer.</p>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>LangChain + Groq LLM</h3>
+            <p>Input is passed through a <code>ChatPromptTemplate</code> to <code>llama-3.1-8b-instant</code> via Groq's ultra-fast inference API.</p>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Resilient JSON Parsing</h3>
+            <p>Output is extracted via 3-layer parser (direct → markdown strip → regex). LLM refusals auto-classify as <code>prompt_injection: critical</code>.</p>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="step-row">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Structured Report</h3>
+            <p>Results rendered as threat badge, risk gauge, detected pattern chips, and prioritized recommendations.</p>
+          </div>
+          <div class="step-arrow">✓</div>
+        </div>
+      </div>
+
+      <!-- Tech stack pills -->
+      <div class="tech-stack">
+        <span class="tech-pill">Python 3.10+</span>
+        <span class="tech-pill">Flask</span>
+        <span class="tech-pill">LangChain</span>
+        <span class="tech-pill">Groq API</span>
+        <span class="tech-pill">llama-3.1-8b-instant</span>
+        <span class="tech-pill">HTML / CSS / JS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THREAT TYPES ───────────────────────── -->
+  <section class="section" id="threats">
+    <div class="section-inner">
+      <div class="section-label">Threat Intelligence</div>
+      <h2 class="section-title">What Can <span class="gradient-text">ThreatGPT</span> Detect?</h2>
+
+      <div class="threat-table-wrap">
+        <table class="threat-table">
+          <thead>
+            <tr>
+              <th>Threat Type</th>
+              <th>Risk Level</th>
+              <th>Example Patterns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tt phishing">🎣 Phishing</span></td>
+              <td><span class="rl high">High</span></td>
+              <td>Fake domains, urgency language, credential requests, suspicious links</td>
+            </tr>
+            <tr>
+              <td><span class="tt malware">🦠 Malware</span></td>
+              <td><span class="rl critical">Critical</span></td>
+              <td>eval/exec, base64 decode, reverse shells, AMSI bypass, registry persistence</td>
+            </tr>
+            <tr>
+              <td><span class="tt injection">💉 Prompt Injection</span></td>
+              <td><span class="rl critical">Critical</span></td>
+              <td>DAN jailbreaks, "ignore previous instructions", SYSTEM OVERRIDE</td>
+            </tr>
+            <tr>
+              <td><span class="tt privacy">🔑 Privacy Leak</span></td>
+              <td><span class="rl high">High</span></td>
+              <td>AWS/Stripe/GitHub keys, SSN, credit cards, DB credentials</td>
+            </tr>
+            <tr>
+              <td><span class="tt safe">✅ Safe</span></td>
+              <td><span class="rl low">Low</span></td>
+              <td>Benign messages, normal correspondence, safe code</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────── -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-glow"></div>
+      <h2>Ready to Analyze a Threat?</h2>
+      <p>Paste any suspicious content and get an instant AI-powered security assessment.</p>
+      <a href="/app" class="btn-primary btn-lg">
+        <span>⚡</span> Launch ThreatGPT Analyzer
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>ThreatGPT &copy; 2026 — AI-powered threat intelligence</span>
+    <span class="footer-sep">|</span>
+    <span>Not a replacement for professional security auditing</span>
+  </footer>
+
+  <script src="/static/js/home.js"></script>
+</body>
+</html>

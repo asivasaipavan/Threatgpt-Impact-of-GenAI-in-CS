@@ -14,8 +14,8 @@ langgraph-prebuilt==0.6.5
 langgraph-sdk==0.2.15
 langsmith==0.7.6
 MarkupSafe==2.1.1
-numpy==1.24.3
-torch==2.6.0
+numpy==1.26.4
+torch==2.2.2
 transformers==4.49.0
 ujson==5.4.0
 Werkzeug==2.2.2

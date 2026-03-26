@@ -95,6 +95,19 @@ python app.py
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Interface
+![Home](home.png)
+
+### ✍️ User Input Example
+![Input](input.png)
+
+### 🔍 Analysis Result
+![Output](output.png)
+
+---
+
 ## 🚀 Future Improvements
 
 * 🎯 Improve detection accuracy
